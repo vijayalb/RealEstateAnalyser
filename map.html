@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<!-- 
+    Student Name: Vijayalakshmi Balakrishnan
+-->
+<html lang="en">
+  <head>
+    <title>Web Mashup: Display House Prices on a Map</title>
+    <meta charset="utf-8"/>
+    <script type="text/javascript" src="map.js"></script>
+	<script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyD4IHDzkteAekD_6wWjmsbckzZeqNTPJLY" type="text/javascript"></script>
+  </head>
+  <body onload="initialize();">
+    <form>
+       <label>House address: <input type="text" id="address"/></label>
+       <label>City: <input type="text" id="city"/></label>
+       <label>State: <input type="text" id="state"/></label>
+       <label>Zip Code: <input type="text" id="zipcode"/></label>
+       <input type="button" onclick="sendRequest(); initialize();" value="Display Info"/>
+	   <button id="clear" type='button' onclick="clearHistory();">Clear</button>
+    </form>
+	<br/>
+	<div id="map" style="width: 600px; height: 500px;"></div><br/>
+	Address: <textarea id ="address_area" rows="5" cols="50"></textarea>
+    Estimate: <textarea id ="amount_area" rows="5" cols="50"></textarea>
+	<br/>
+	
+  </body>
+</html>
